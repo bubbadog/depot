@@ -32,7 +32,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to store_url }
-        format.js # rails now will look for create template create.js.erb
+        format.js { @current_item = @line_item }# rails now will look for create template create.js.erb
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
