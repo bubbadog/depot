@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CartTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "unique products in cart" do
+    assert true
+  end
 end
