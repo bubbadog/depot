@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'store/index'
   resources :products do
+    get :download, on: :member
     get :who_bought, on: :member
   end
 

@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  include ActionController::Live
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -68,6 +69,18 @@ class ProductsController < ApplicationController
       respond_to do |format|
         format.atom
      end
+   end
+
+   # mock streaming of download, includes 'include ActionController::Live' declaration
+  def download
+    response.headers['Content-Type'] = 'text/plain'
+    40.times do |i|
+      response.stream.write "Line #{i}\n\n"
+      sleep 0.10
+    end
+    response.stream.write "Fini.\n"
+  ensure
+    response.stream.close
    end
  end
 

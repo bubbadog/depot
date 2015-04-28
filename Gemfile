@@ -30,6 +30,9 @@ gem 'spring',        group: :development
 # Add pry to aid in debugging
 gem 'pry-rails', :group => :development
 
+# USe Figaro to keep environment variables hidden
+gem "figaro"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,3 +44,6 @@ gem 'pry-rails', :group => :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Puma as a server for ebook downloads
+# gem 'puma'
