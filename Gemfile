@@ -31,7 +31,7 @@ gem 'spring',        group: :development
 gem 'pry-rails', :group => :development
 
 # USe Figaro to keep environment variables hidden
-gem "figaro"
+# gem "figaro"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
